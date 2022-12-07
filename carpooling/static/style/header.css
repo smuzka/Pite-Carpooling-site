@@ -3,9 +3,32 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     padding-left: 50px;
     padding-right: 50px;
     background-color: #4a154b;
+}
+
+.header-logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    text-decoration: 0;
+}
+
+.header-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f7f7f7;
+    color: #4a154b;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
