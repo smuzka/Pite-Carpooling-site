@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}{% endblock title %}
+        </title>
+        <link rel="stylesheet" href="{% static 'style/main.css' %}">
+        {% block custom_css %}{% endblock custom_css %}
+    </head>
+    <body class="base-template">
+        {% include 'header.html' %}
+        {% block body_data %}{% endblock body_data %}
+
+        {% include 'footer.html' %}
+        {% block custom_js %}{% endblock custom_js %}
+    </body>
+</html>
