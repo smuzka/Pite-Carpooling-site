@@ -1,0 +1,47 @@
+{% extends 'baseViewTemplate.html' %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block body_data %}
+
+<script src="{% static 'table/js/sortable.min.js' %}"></script>
+
+<div class="home-page">
+
+    <table class="sortable-theme-bootstrap" data-sortable>
+        <thead>
+            <tr>
+                <th data-sortable="true">
+                    costam
+                </th>
+                <th data-sortable="true">
+                    costam2
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-value="0">
+                    0
+                </td>
+                <td data-value="5">
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td data-value="1">
+                    1
+                </td>
+                <td data-value="2">
+                    2
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
+{% endblock body_data %}

@@ -18,10 +18,12 @@
     display: flex;
     flex-direction: column;
     min-width: 400px;
-    border: 1px solid #4a154b;
+    /*border: 1px solid #4a154b;*/
+    border: 1px solid #833885;
     border-radius: 15px;
     padding: 25px;
-    background-color: #4a154b;
+    /*background-color: #4a154b;*/
+    background-color: #833885;
     color: white;
 }
 
@@ -37,6 +39,7 @@
     margin-bottom: 15px;
     border: 0;
     background-color: #f7f7f7;
+    /*background-color: #833885;*/
     color: #4a154b;
     border-radius: 15px;
     min-width: 50px;

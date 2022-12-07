@@ -8,6 +8,9 @@
             {% block title %}{% endblock title %}
         </title>
         <link rel="stylesheet" href="{% static 'style/main.css' %}">
+        <link rel="stylesheet" href="{% static 'table/css/sortable-theme-bootstrap.css' %}" />
+        <script src="{% static 'table/js/sortable.min.js' %}"></script>
+
         {% block custom_css %}{% endblock custom_css %}
     </head>
     <body class="base-template">
