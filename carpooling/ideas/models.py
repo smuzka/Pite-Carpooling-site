@@ -17,7 +17,7 @@ class City(models.Model):
         return f'{self.name}'
 
 class Ride(models.Model):
-    driver = models.ForeignKey(User, on_delete=models.CASCADE)
+    driver = models.ForeignKey(User, on_delete=models.CASCADE, related_name='driver')
 
     price = models.FloatField()
     seats_left = models.IntegerField()
@@ -26,7 +26,7 @@ class Ride(models.Model):
     leave_date = models.DateTimeField()
     arrival_date = models.DateTimeField()
 
-    begin_city = models.ForeignKey(City, on_delete=models.CASCADE)
-    end_city = models.ForeignKey(City, on_delete=models.CASCADE)
+    begin_city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='begin_city')
+    end_city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='end_city')
 
     passengers = models.ManyToManyField(User)
