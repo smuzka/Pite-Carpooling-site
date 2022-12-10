@@ -15,3 +15,18 @@ class City(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+class Ride(models.Model):
+    driver = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    price = models.FloatField()
+    seats_left = models.IntegerField()
+    allow_pets = models.BooleanField()
+
+    leave_date = models.DateTimeField()
+    arrival_date = models.DateTimeField()
+
+    begin_city = models.ForeignKey(City, on_delete=models.CASCADE)
+    end_city = models.ForeignKey(City, on_delete=models.CASCADE)
+
+    passengers = models.ManyToManyField(User)
