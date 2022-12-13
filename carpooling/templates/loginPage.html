@@ -10,7 +10,7 @@ Login
     <div class="login-title">Login</div>
 
     <form class="login-form">
-
+        {% csrf_token %}
         <label class="login-form-label">Username</label>
         <input class="login-form-input" type="text">
 

@@ -10,7 +10,7 @@ Register
     <div class="login-title">Register</div>
 
     <form class="login-form">
-
+        {% csrf_token %}
         <label class="login-form-label">Username</label>
         <input class="login-form-input" type="text">
 
