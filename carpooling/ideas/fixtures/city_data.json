@@ -1,0 +1,583 @@
+[
+    {
+      "model": "ideas.city",
+      "pk": 1,
+      "fields": {
+        "name": "Warsaw"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 2,
+      "fields": {
+        "name": "Kraków"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 3,
+      "fields": {
+        "name": "Łódź"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 4,
+      "fields": {
+        "name": "Wrocław"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 5,
+      "fields": {
+        "name": "Poznań"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 6,
+      "fields": {
+        "name": "Gdańsk"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 7,
+      "fields": {
+        "name": "Szczecin"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 8,
+      "fields": {
+        "name": "Bydgoszcz"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 9,
+      "fields": {
+        "name": "Lublin"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 10,
+      "fields": {
+        "name": "Białystok"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 11,
+      "fields": {
+        "name": "Katowice"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 12,
+      "fields": {
+        "name": "Gdynia"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 13,
+      "fields": {
+        "name": "Częstochowa"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 14,
+      "fields": {
+        "name": "Radom"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 15,
+      "fields": {
+        "name": "Rzeszów"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 16,
+      "fields": {
+        "name": "Toruń"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 17,
+      "fields": {
+        "name": "Sosnowiec"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 18,
+      "fields": {
+        "name": "Kielce"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 19,
+      "fields": {
+        "name": "Gliwice"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 20,
+      "fields": {
+        "name": "Olsztyn"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 21,
+      "fields": {
+        "name": "Zabrze"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 22,
+      "fields": {
+        "name": "Bielsko-Biała"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 23,
+      "fields": {
+        "name": "Bytom"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 24,
+      "fields": {
+        "name": "Zielona Góra"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 25,
+      "fields": {
+        "name": "Rybnik"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 26,
+      "fields": {
+        "name": "Ruda Śląska"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 27,
+      "fields": {
+        "name": "Opole"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 28,
+      "fields": {
+        "name": "Tychy"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 29,
+      "fields": {
+        "name": "Gorzów Wielkopolski"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 30,
+      "fields": {
+        "name": "Elbląg"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 31,
+      "fields": {
+        "name": "Dąbrowa Górnicza"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 32,
+      "fields": {
+        "name": "Płock"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 33,
+      "fields": {
+        "name": "Wałbrzych"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 34,
+      "fields": {
+        "name": "Włocławek"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 35,
+      "fields": {
+        "name": "Tarnów"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 36,
+      "fields": {
+        "name": "Chorzów"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 37,
+      "fields": {
+        "name": "Koszalin"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 38,
+      "fields": {
+        "name": "Kalisz"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 39,
+      "fields": {
+        "name": "Legnica"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 40,
+      "fields": {
+        "name": "Grudziądz"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 41,
+      "fields": {
+        "name": "Jaworzno"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 42,
+      "fields": {
+        "name": "Słupsk"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 43,
+      "fields": {
+        "name": "Jastrzębie Zdrój"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 44,
+      "fields": {
+        "name": "Nowy Sącz"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 45,
+      "fields": {
+        "name": "Jelenia Góra"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 46,
+      "fields": {
+        "name": "Siedlce"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 47,
+      "fields": {
+        "name": "Mysłowice"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 48,
+      "fields": {
+        "name": "Konin"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 49,
+      "fields": {
+        "name": "Piła"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 50,
+      "fields": {
+        "name": "Piotrków Trybunalski"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 51,
+      "fields": {
+        "name": "Lubin"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 52,
+      "fields": {
+        "name": "Inowrocław"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 53,
+      "fields": {
+        "name": "Ostrów Wielkopolski"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 54,
+      "fields": {
+        "name": "Suwałki"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 55,
+      "fields": {
+        "name": "Stargard"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 56,
+      "fields": {
+        "name": "Gniezno"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 57,
+      "fields": {
+        "name": "Ostrowiec Świętokrzyski"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 58,
+      "fields": {
+        "name": "Siemianowice Śląskie"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 59,
+      "fields": {
+        "name": "Głogów"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 60,
+      "fields": {
+        "name": "Pabianice"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 61,
+      "fields": {
+        "name": "Leszno"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 62,
+      "fields": {
+        "name": "Żory"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 63,
+      "fields": {
+        "name": "Zamość"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 64,
+      "fields": {
+        "name": "Pruszków"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 65,
+      "fields": {
+        "name": "Łomża"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 66,
+      "fields": {
+        "name": "Ełk"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 67,
+      "fields": {
+        "name": "Tarnowskie Góry"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 68,
+      "fields": {
+        "name": "Tomaszów Mazowiecki"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 69,
+      "fields": {
+        "name": "Chełm"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 70,
+      "fields": {
+        "name": "Mielec"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 71,
+      "fields": {
+        "name": "Kędzierzyn-Koźle"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 72,
+      "fields": {
+        "name": "Przemyśl"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 73,
+      "fields": {
+        "name": "Stalowa Wola"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 74,
+      "fields": {
+        "name": "Tczew"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 75,
+      "fields": {
+        "name": "Biała Podlaska"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 76,
+      "fields": {
+        "name": "Bełchatów"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 77,
+      "fields": {
+        "name": "Świdnica"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 78,
+      "fields": {
+        "name": "Będzin"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 79,
+      "fields": {
+        "name": "Zgierz"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 80,
+      "fields": {
+        "name": "Piekary Śląskie"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 81,
+      "fields": {
+        "name": "Racibórz"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 82,
+      "fields": {
+        "name": "Legionowo"
+      }
+    },
+    {
+      "model": "ideas.city",
+      "pk": 83,
+      "fields": {
+        "name": "Ostrołęka"
+      }
+    }
+  ]
