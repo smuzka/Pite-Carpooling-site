@@ -64,6 +64,12 @@
     column-gap: 10px;
 }
 
+.profile-page__rides-ride-seats {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .profile-page__rides-ride-car-owner-image {
     min-width: 25px;
     width: 25px;
