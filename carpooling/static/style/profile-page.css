@@ -1,0 +1,25 @@
+
+
+.profile-page {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-page__rides {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profile-page__rides-my-rides {
+    display: flex;
+    border: 1px solid #833885;
+    border-radius: 10px;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.profile-page__rides-ride {
+    
+}

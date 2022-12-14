@@ -4,10 +4,8 @@ from .forms import UserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 
-
 def home(request):
     return render(request, "homePage.html")
-
 
 def login_request(request):
     if request.method == "POST":
@@ -42,3 +40,7 @@ def register_request(request):
 def logout_request(request):
     logout(request)
     return redirect("/")
+
+
+def profile(request):
+    return render(request=request, template_name="profilePage.html")
