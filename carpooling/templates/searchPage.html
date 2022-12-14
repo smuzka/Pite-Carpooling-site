@@ -1,0 +1,34 @@
+{% extends 'baseViewTemplate.html' %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block body_data %}
+
+<div class="search-page">
+
+    <h1 class="search-page__title">Gdzie Jedziemy?</h1>
+    <div class="row g-3">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Miasto startowe" aria-label="Miasto startowe">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Miasto docelowe" aria-label="Miasto docelowe">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary search-page__button-search">Szukaj</button>
+        </div>
+    </div>
+
+
+    <h1 class="search-page__title">Znalezione Trasy:</h1>
+        <div id="routes">
+            {% for route in routes %}
+                {% include "routeCard.html" %}
+            {% empty %}
+                <h3>Brak dostępnych tras :(</h3>
+            {% endfor %}
+        </div>
+</div>
+{% endblock body_data %}

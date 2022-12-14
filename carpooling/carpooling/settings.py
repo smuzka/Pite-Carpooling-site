@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'sass_processor',
     'ideas',
     'bootstrap5',
+    'jquery',
 ]
 
 MIDDLEWARE = [
