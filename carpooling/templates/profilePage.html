@@ -22,43 +22,11 @@ Login
             <h1 class="profile-page__rides-title">
                 Podróże jako kierowca
             </h1>
-            <card class="profile-page__rides-ride">
-                <div class="profile-page__rides-ride-origin">
-                    Krakow
-                    <svg width="25" height="25" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="Layer 2" id="Layer_2"><path d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z"/></g></svg>
-                    Warszawa
-                </div>
-                <div class="profile-page__rides-ride-date">
-                    24.12.2022 <span class="profile-page__rides-ride-date-hour"> 17:00</span>
-                </div>
-                <div class="profile-page__rides-ride-car-owner">
-                    <span class="profile-page__rides-ride-car-owner-image"></span>
-                    Kapitan Bomba
-                </div>
-                <div class="profile-page__rides-ride-seats">
-                    <span>Pozostało wolnych miejsc:</span>
-                    2
-                </div>
-            </card>
-
-            <card class="profile-page__rides-ride">
-                <div class="profile-page__rides-ride-origin">
-                    Krakow
-                    <svg width="25" height="25" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="Layer 2" id="Layer_2"><path d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z"/></g></svg>
-                    Warszawa
-                </div>
-                <div class="profile-page__rides-ride-date">
-                    24.12.2022 <span class="profile-page__rides-ride-date-hour"> 17:00</span>
-                </div>
-                <div class="profile-page__rides-ride-car-owner">
-                    <span class="profile-page__rides-ride-car-owner-image"></span>
-                    Kapitan Bomba
-                </div>
-                <div class="profile-page__rides-ride-seats">
-                    <span>Pozostało wolnych miejsc:</span>
-                    2
-                </div>
-            </card>
+            {% for route in myRoutes %}
+                {% include "routeCard.html" %}
+                {% empty %}
+                <h3>Brak dostępnych tras :(</h3>
+            {% endfor %}
 
         </div>
 
@@ -66,7 +34,11 @@ Login
             <h1 class="profile-page__rides-title">
                 Podróże jako pasażer
             </h1>
-
+            {% for route in passengerRoutes %}
+                {% include "routeCard.html" %}
+                {% empty %}
+                <h3>Brak dostępnych tras :(</h3>
+            {% endfor %}
         </div>
 
     </div>
@@ -77,20 +49,20 @@ Login
 
 
         <div class="profile-page__profile-name">
-            Jacek Jackowski
+            {{ name }}
         </div>
         <div class="profile-page__profile-data">
             <div class="profile-page__profile-data-text">
                 <span class="profile-page__profile-data-help-text">Dołączył(a)</span>
-                4 miesiące temu
+                {{ creationDate }}
             </div>
             <div class="profile-page__profile-data-text profile-page__profile-data-text-middle">
                 <span class="profile-page__profile-data-help-text">wiek</span>
-                24 lata
+                {{ age }} lata
             </div>
             <div class="profile-page__profile-data-text">
                 <span class="profile-page__profile-data-help-text">płeć</span>
-                mężczyzna
+                {{ sex }}
             </div>
 
         </div>
@@ -104,7 +76,7 @@ Login
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        {{ aboutMe }}
                     </div>
                 </div>
             </div>
@@ -116,7 +88,7 @@ Login
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        {{ aboutCar }}
                     </div>
                 </div>
             </div>

@@ -1,5 +1,12 @@
 
+/*template*/
 @import "header.css";
 @import "base-view-template.css";
+
+/*pages*/
 @import "login-page.css";
 @import "profile-page.css";
+@import "search-page.css";
+
+/*components*/
+@import "route-card.css";

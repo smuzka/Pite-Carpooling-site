@@ -43,4 +43,51 @@ def logout_request(request):
 
 
 def profile(request):
-    return render(request=request, template_name="profilePage.html")
+    myContext = {"name": "Jacek Jackowski",
+                "creationDate": "4 miesiące temu",
+                "age" : "24", "sex": "mężczyzna",
+                "aboutMe": "Lorem Ipsum",
+                "aboutCar": "Lorem Ipsum",
+                "myRoutes": [{
+                        "origin": "Krakow",
+                        "destination": "Warszawa",
+                        "date": "24.12.2022",
+                        "hour": "17:00",
+                        "carOwner": "Kapitan Bomba",
+                        "seatsLeft": 2,
+                    },
+                    {
+                        "origin": "Krakow",
+                        "destination": "Warszawa",
+                        "date": "24.12.2022",
+                        "hour": "17:00",
+                        "carOwner": "Kapitan Bomba",
+                        "seatsLeft": 2,
+                    }],
+                "passengerRoutes": [{
+                         "origin": "Krakow",
+                         "destination": "Warszawa",
+                         "date": "24.12.2022",
+                         "hour": "17:00",
+                         "carOwner": "Kapitan Bomba",
+                         "seatsLeft": 2,
+                    }]
+   }
+
+    return render(request=request, template_name="profilePage.html",
+                  context=myContext)
+
+def search(request):
+    myContext = {
+        "routes": [{
+            "origin": "Krakow",
+            "destination": "Warszawa",
+            "date": "24.12.2022",
+            "hour": "17:00",
+            "carOwner": "Kapitan Bomba",
+            "seatsLeft": 2,
+        }]
+    }
+
+    return render(request=request, template_name="searchPage.html", context=myContext)
+
