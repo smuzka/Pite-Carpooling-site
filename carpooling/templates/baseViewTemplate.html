@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="{% static 'style/main.css' %}">
         <link rel="stylesheet" href="{% static 'table/css/sortable-theme-bootstrap.css' %}" />
         <script src="{% static 'table/js/sortable.min.js' %}"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }} /static/jquery/jquery-3.6.2.min.js"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
         {% block custom_css %}{% endblock custom_css %}
     </head>
