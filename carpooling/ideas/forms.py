@@ -1,10 +1,12 @@
 from django import forms
 from .models import User, Ride, City
+from phonenumber_field.formfields import PhoneNumberField
 
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['fname', 'lname', 'email', 'passwd']
+        fields = ['fname', 'lname', 'email', 'phone_number', 'passwd']
+        phone_number = PhoneNumberField()
         widgets = {
             'passwd': forms.PasswordInput(),
         }
