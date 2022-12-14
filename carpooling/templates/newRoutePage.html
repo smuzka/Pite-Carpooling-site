@@ -1,0 +1,51 @@
+{% extends 'baseViewTemplate.html' %}
+
+{% block title %}
+Dodaj podróż
+{% endblock title %}
+
+{% block body_data %}
+
+<div class="new-route-page">
+
+    <form class="needs-validation" novalidate="">
+        <div class="mb-3">
+            <label class="form-label" for="new-route-origin">Miasto startowe</label>
+            <input type="text" class="form-control new-route-page__input" id="new-route-origin" required="">
+            <div class="invalid-feedback">Pole wymagane</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="new-route-destination">Miasto docelowe</label>
+            <input type="text" class="form-control new-route-page__input" id="new-route-destination" required>
+            <div class="invalid-feedback">Pole wymagane</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="new-route-price">Cena za osobę</label>
+            <input type="text" class="form-control new-route-page__input" id="new-route-price" required>
+            <div class="invalid-feedback">Pole wymagane</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="new-route-seats">Ilość miejsc</label>
+            <input type="text" class="form-control new-route-page__input" id="new-route-seats" required>
+            <div class="invalid-feedback">Pole wymagane</div>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input new-route-page__input-checkbox" id="new-route-trunk">
+            <label class="form-check-label" for="new-route-trunk">Posiadam bagażnik</label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input new-route-page__input-checkbox" id="new-route-animal">
+            <label class="form-check-label" for="new-route-animal">Pozwalam na przewóz zwierząt</label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input new-route-page__input-checkbox" id="new-route-child">
+            <label class="form-check-label" for="new-route-child">Posiadam fotelik dla dziecka</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary new-route-page__submit" onsubmit="onSubmitFormValidator()">Dodaj</button>
+    </form>
+
+
+</div>
+{% endblock body_data %}

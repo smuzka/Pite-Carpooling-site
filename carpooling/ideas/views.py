@@ -91,3 +91,7 @@ def search(request):
 
     return render(request=request, template_name="searchPage.html", context=myContext)
 
+def new_route(request):
+    myContext = {}
+    return render(request=request, template_name="newRoutePage.html", context=myContext)
+

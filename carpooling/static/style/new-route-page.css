@@ -1,0 +1,29 @@
+
+.new-route-page {
+    min-height: calc(100vh - 85px);
+    padding: 5rem;
+}
+
+.new-route-page__input:focus, new-route-page__input:focus-visible {
+    border: 0;
+    box-shadow: 0 0 0 0.25rem #b886bb !important;
+}
+
+.new-route-page__input-checkbox{
+    background-color: #833885 !important;
+    border: 0 !important;
+}
+
+.new-route-page__input-checkbox:focus, new-route-page__input-checkbox:focus-visible {
+    box-shadow: 0 0 0 0.25rem transparent !important;
+
+}
+
+.new-route-page__submit {
+    background-color: #833885 !important;
+    border: 0 !important;
+}
+
+.new-route-page__submit:focus, new-route-page__submit:focus-visible {
+    box-shadow: 0 0 0 0.25rem #b886bb !important;
+}
