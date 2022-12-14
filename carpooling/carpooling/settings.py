@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'sass_processor',
     'ideas',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [

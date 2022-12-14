@@ -3,23 +3,140 @@
 .profile-page {
     display: flex;
     flex-direction: row;
+    min-height: calc(100vh - 85px);
 }
 
 .profile-page__rides {
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding: 3rem;
+    flex: 1 0 60%;
+}
 
+.profile-page__rides-title {
+    margin-top: 3rem;
 }
 
 .profile-page__rides-my-rides {
     display: flex;
-    border: 1px solid #833885;
-    border-radius: 10px;
     flex-direction: column;
     row-gap: 15px;
 }
 
 .profile-page__rides-ride {
-    
+    border: 1px solid #833885;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.profile-page__rides-ride-origin {
+    column-gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-page__rides-ride-date {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    justify-content: center;
+}
+
+.profile-page__rides-ride-date-hour {
+    font-size: 20px;
+}
+
+.profile-page__rides-ride-car-owner {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.profile-page__rides-ride-car-owner-image {
+    min-width: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.profile-page__profile {
+    padding: 3rem;
+    padding-top: 8rem;
+    background-color: #e9e9e9;
+    flex: 1 0 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-page__profile-image {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+
+.profile-page__profile-name {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.profile-page__profile-data{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.profile-page__profile-data-help-text {
+    font-size: 16px !important;
+    font-weight: 400;
+}
+
+.profile-page__profile-data-text {
+    flex: 1 1 33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    height: 100%;
+}
+
+.profile-page__profile-data-text-middle {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.accordion-button {
+    background-color: transparent;
+}
+
+.profile-page__profile-accordion{
+    background-color: transparent !important;
+    width: 100%;
 }
