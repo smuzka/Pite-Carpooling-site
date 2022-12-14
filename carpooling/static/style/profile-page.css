@@ -146,3 +146,12 @@
     background-color: transparent !important;
     width: 100%;
 }
+
+.profile-page__profile-accordion-button {
+    background-color: transparent !important;
+    width: 100%;
+}
+
+.profile-page__profile-accordion-button:focus, profile-page__profile-accordion-button:focus-visible{
+    box-shadow: 0 0 0 0.25rem #b886bb !important;
+}
