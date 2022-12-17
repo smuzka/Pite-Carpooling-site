@@ -9,6 +9,7 @@ class User(models.Model):
     lname = models.CharField(max_length=200)
     aboutme = models.TextField(blank=True, null=True, default=None)
     birth_date = models.DateField()
+    profile_picture = models.ImageField(upload_to='pfps', null=True, blank=True)
 
     email = models.EmailField()
     phone_number = PhoneNumberField(unique=True)
