@@ -5,7 +5,7 @@ from phonenumber_field.formfields import PhoneNumberField
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['fname', 'lname', 'email', 'phone_number', 'passwd']
+        fields = ['fname', 'lname', 'aboutme', 'birth_date', 'email', 'phone_number', 'passwd']
         phone_number = PhoneNumberField()
         widgets = {
             'passwd': forms.PasswordInput(),
