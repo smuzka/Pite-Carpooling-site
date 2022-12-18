@@ -91,6 +91,63 @@
     align-items: center;
 }
 
+.profile-page__profile-edit-button {
+    position: absolute;
+    right: 15px;
+    top: 100px;
+    background-color: transparent !important;
+    color: black !important;
+    border: 0 !important;
+}
+
+.profile-page__profile-edit-button:focus {
+    box-shadow: 0 0 0 0.25rem #b886bb !important;
+}
+
+.profile-page__profile-edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-page__profile-edit-label {
+    font-size: 22px;
+    margin-bottom: 10px;
+
+}
+
+.profile-page__profile-edit-input {
+    color: #4a154b;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border: 0;
+    background-color: #bbbbbb;
+    border-radius: 15px;
+    min-width: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.profile-page__profile-edit-save {
+    font-weight: 600 !important;
+    background-color: #4a154b !important;
+    margin-top: 20px !important;
+    font-size: 16px !important;
+    border: 0 !important;
+}
+
+
+.profile-page__profile-edit-cancel {
+    font-weight: 600 !important;
+    background-color: #bbbbbb !important;
+    color: #4a154b !important;
+    margin-top: 20px !important;
+    font-size: 16px !important;
+    border: 0 !important;
+}
+
 .profile-page__profile-image {
     width: 200px;
     height: 200px;

@@ -45,7 +45,8 @@ def logout_request(request):
 def profile(request):
     myContext = {"name": "Jacek Jackowski",
                 "creationDate": "4 miesiące temu",
-                "age" : "24", "sex": "mężczyzna",
+                "age" : "24",
+                "phoneNumber": "123456789",
                 "aboutMe": "Lorem Ipsum",
                 "aboutCar": "Lorem Ipsum",
                 "myRoutes": [{
