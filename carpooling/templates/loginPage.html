@@ -11,11 +11,11 @@ Login
 
     <form class="login-form">
         {% csrf_token %}
-        <label class="login-form-label">Username</label>
-        <input class="login-form-input" type="text">
+        <label class="login-form-label" for="login-email">Email</label>
+        <input class="login-form-input" type="text" id="login-email">
 
-        <label class="login-form-label">Password</label>
-        <input class="login-form-input" type="password">
+        <label class="login-form-label" for="login-password">Password</label>
+        <input class="login-form-input" type="password" id="login-password">
 
         <button class="login-form-submit" type="submit">Login</button>
 

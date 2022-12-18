@@ -11,11 +11,21 @@ Register
 
     <form class="login-form">
         {% csrf_token %}
-        <label class="login-form-label">Username</label>
-        <input class="login-form-input" type="text">
 
-        <label class="login-form-label">Password</label>
-        <input class="login-form-input" type="password">
+        <label class="login-form-label" for="register-name">Imię</label>
+        <input class="login-form-input" type="text" id="register-name">
+
+        <label class="login-form-label" for="register-surname">Nazwisko</label>
+        <input class="login-form-input" type="text" id="register-surname">
+
+        <label class="login-form-label" for="register-email">Email</label>
+        <input class="login-form-input" type="text" id="register-email">
+
+        <label class="login-form-label" for="register-phone-number">Telefon</label>
+        <input class="login-form-input" type="text" id="register-phone-number">
+
+        <label class="login-form-label" for="register-password">Password</label>
+        <input class="login-form-input" type="password" id="register-password">
 
         <button class="login-form-submit" type="submit">Register</button>
 
