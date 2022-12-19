@@ -54,25 +54,50 @@ def profile(request):
                         "destination": "Warszawa",
                         "date": "24.12.2022",
                         "hour": "17:00",
-                        "carOwner": "Kapitan Bomba",
+                        "carOwner": "Jacek Jackowski",
                         "seatsLeft": 2,
+                        "isCarOwner": True,
+                        "passengers": [{
+                                "name": "Jacek",
+                                "phoneNumber": "123456789",
+                            },
+                            {
+                                "name": "Mietek",
+                                "phoneNumber": "172938481",
+                            },
+                            {
+                                "name": "Zdziś",
+                                "phoneNumber": "987537952",
+                            }],
                     },
                     {
-                        "origin": "Krakow",
-                        "destination": "Warszawa",
-                        "date": "24.12.2022",
+                        "origin": "Warszawa",
+                        "destination": "Krakow",
+                        "date": "10.10.2022",
                         "hour": "17:00",
-                        "carOwner": "Kapitan Bomba",
+                        "carOwner": "Jacek Jackowski",
                         "seatsLeft": 2,
+                        "isCarOwner": True,
+                        "passengers": [],
                     }],
                 "passengerRoutes": [{
-                         "origin": "Krakow",
-                         "destination": "Warszawa",
+                         "origin": "Mielno",
+                         "destination": "Zamosc",
                          "date": "24.12.2022",
                          "hour": "17:00",
-                         "carOwner": "Kapitan Bomba",
-                         "seatsLeft": 2,
-                    }]
+                         "carOwner": "Jacek Jackowski",
+                         "seatsLeft": 4,
+                         "isCarOwner": False,
+                         "passengers": [{
+                                    "name": "Kuba",
+                                    "phoneNumber": "123456789",
+                                },
+                                {
+                                    "name": "Też Kuba",
+                                    "phoneNumber": "172938481",
+                                }],
+                         }],
+
    }
 
     return render(request=request, template_name="profilePage.html",
