@@ -1,8 +1,12 @@
+import datetime
+
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import UserForm
+
+from . import models
+from .forms import UserForm, RideForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -27,7 +31,6 @@ def login_request(request):
 
 def register_request(request):
     if request.method == "POST":
-        print(request.POST)
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
@@ -50,11 +53,20 @@ def logout_request(request):
 
 
 def profile(request):
-    myContext = {"name": "Jacek Jackowski",
-                "creationDate": "4 miesiące temu",
-                "age" : "24",
-                "phoneNumber": "123456789",
-                "aboutMe": "Lorem Ipsum",
+    print(request.user)
+    u = models.User.objects.get(email=request.user)
+    print(u)
+    name = u.first_name + " " + u.last_name
+
+    today = datetime.date.today()
+    age = today.year - u.birth_date.year - ((today.month, today.day) < (u.birth_date.month, u.birth_date.day))
+    join_date = today - u.join_date
+
+    myContext = {"name": name,
+                "creationDate": join_date,
+                "age" : age,
+                "phoneNumber": u.phone_number,
+                "aboutMe": u.about_me,
                 "aboutCar": "Lorem Ipsum",
                 "myRoutes": [{
                         "origin": "Krakow",
@@ -111,6 +123,8 @@ def profile(request):
                   context=myContext)
 
 def search(request):
+    routes = []
+
     myContext = {
         "routes": [{
             "origin": "Krakow",
@@ -125,6 +139,15 @@ def search(request):
     return render(request=request, template_name="searchPage.html", context=myContext)
 
 def new_route(request):
-    myContext = {}
-    return render(request=request, template_name="newRoutePage.html", context=myContext)
+    if request.method == 'POST':
+        data = request.POST.copy()
+        data.update({'driver' : [models.User.objects.get(email=request.user)]})
+        print(data['driver'])
+        form = RideForm(data)
+        for field in form:
+            print("Field Error:", field.name, field.errors)
+        if form.is_valid():
+            form.save()
+    form = RideForm(initial= {'driver' : models.User.objects.get(email=request.user).pk})
+    return render(request=request, template_name="newRoutePage.html", context={"ride_form" : form})
 

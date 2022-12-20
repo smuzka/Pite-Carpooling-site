@@ -14,7 +14,7 @@ class User(models.Model):
     password = models.CharField(max_length=200)
 
     def __str__(self):
-        return f'{self.lname} {self.fname}'
+        return f'{self.last_name} {self.first_name}'
 
 class City(models.Model):
     name = models.CharField(max_length=200)
@@ -27,12 +27,11 @@ class Ride(models.Model):
 
     price = models.FloatField()
     seats_left = models.IntegerField()
-    allow_pets = models.BooleanField()
-
-    leave_date = models.DateTimeField()
-    arrival_date = models.DateTimeField()
-
+    allow_pets = models.BooleanField(default=False)
+    baby_seat = models.BooleanField(default=False)
+    trunk = models.BooleanField(default=False)
+    leave_date = models.DateTimeField(default='YYYY-MM-DD HH:MM')
+    arrival_date = models.DateTimeField(default='YYYY-MM-DD HH:MM')
     begin_city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='begin_city')
     end_city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='end_city')
-
     passengers = models.ManyToManyField(User)
