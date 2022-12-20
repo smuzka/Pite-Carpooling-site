@@ -3,43 +3,53 @@
 {% block title %}
 Dodaj podróż
 {% endblock title %}
-
+{% load widget_tweaks %}
 {% block body_data %}
 
 <div class="new-route-page">
 
-    <form class="needs-validation" novalidate="">
+    <form class="needs-validation" novalidate="" method="post">
+        {% csrf_token %}
         <div class="mb-3">
             <label class="form-label" for="new-route-origin">Miasto startowe</label>
-            <input type="text" class="form-control new-route-page__input" id="new-route-origin" required="">
+            {{ ride_form.begin_city|add_class:'form-control new-route-page__input' }}
             <div class="invalid-feedback">Pole wymagane</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="new-route-destination">Miasto docelowe</label>
-            <input type="text" class="form-control new-route-page__input" id="new-route-destination" required>
+             {{ ride_form.end_city|add_class:'form-control new-route-page__input' }}
             <div class="invalid-feedback">Pole wymagane</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="new-route-price">Cena za osobę</label>
-            <input type="text" class="form-control new-route-page__input" id="new-route-price" required>
+            {{ ride_form.price|add_class:'form-control new-route-page__input' }}
             <div class="invalid-feedback">Pole wymagane</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="new-route-seats">Ilość miejsc</label>
-            <input type="text" class="form-control new-route-page__input" id="new-route-seats" required>
+            {{ ride_form.seats_left|add_class:'form-control new-route-page__input' }}
             <div class="invalid-feedback">Pole wymagane</div>
         </div>
-
+        <div class="mb-3">
+            <label class="form-label" for="new-route-arrival_date">Data odjazdu</label>
+            {{ ride_form.leave_date|add_class:'form-control new-route-page__input' }}
+            <div class="invalid-feedback">Pole wymagane</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="new-route-arrival_date">Data przyjazdu</label>
+            {{ ride_form.arrival_date|add_class:'form-control new-route-page__input' }}
+            <div class="invalid-feedback">Pole wymagane</div>
+        </div>
         <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input new-route-page__input-checkbox" id="new-route-trunk">
+            {{ ride_form.trunk|add_class:'form-check-input new-route-page__input-checkbox' }}
             <label class="form-check-label" for="new-route-trunk">Posiadam bagażnik</label>
         </div>
         <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input new-route-page__input-checkbox" id="new-route-animal">
+            {{ ride_form.allow_pets|add_class:'form-check-input new-route-page__input-checkbox' }}
             <label class="form-check-label" for="new-route-animal">Pozwalam na przewóz zwierząt</label>
         </div>
         <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input new-route-page__input-checkbox" id="new-route-child">
+            {{ ride_form.baby_seat|add_class:'form-check-input new-route-page__input-checkbox' }}
             <label class="form-check-label" for="new-route-child">Posiadam fotelik dla dziecka</label>
         </div>
 
