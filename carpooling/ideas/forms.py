@@ -48,3 +48,14 @@ class RideForm(forms.ModelForm):
             inst.save()
             self.save_m2m()
         return inst
+
+class SearchRouteForm(forms.Form):
+    origin = forms.ModelChoiceField(
+            queryset=City.objects.all(),
+            required=True,
+
+        )
+    destination = forms.ModelChoiceField(
+        queryset=City.objects.all(),
+        required=True,
+    )
