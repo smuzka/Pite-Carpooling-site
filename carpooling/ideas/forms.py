@@ -22,7 +22,7 @@ class RideForm(forms.ModelForm):
     class Meta:
         model = Ride
 
-        fields = ['driver', 'price', 'seats_left', 'allow_pets', 'trunk', 'baby_seat', 'leave_date', 'arrival_date', 'begin_city', 'end_city']
+        fields = ['price', 'seats_left', 'allow_pets', 'trunk', 'baby_seat', 'leave_date', 'arrival_date', 'begin_city', 'end_city']
         begin_city = forms.ModelChoiceField(
             queryset=City.objects.all(),
             required=True,
@@ -36,7 +36,15 @@ class RideForm(forms.ModelForm):
             'arrival_date' : DateTimeInput(),
             'leave_date' : DateTimeInput()
         }
+
     def __init__(self, *args, **kwargs):
-        super(RideForm, self).__init__(*args,**kwargs)
-        for field in self.fields:
-            self.fields[field].widget.attrs = {'class' : 'form-control'}
+        self._driver_id = kwargs.pop('driver_id')
+        super(RideForm, self).__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+        inst = super(RideForm, self).save(commit=False)
+        inst.driver_id = self._driver_id
+        if commit:
+            inst.save()
+            self.save_m2m()
+        return inst
