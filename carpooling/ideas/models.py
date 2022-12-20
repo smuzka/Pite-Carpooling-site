@@ -4,17 +4,14 @@ from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 class User(models.Model):
     join_date = models.DateField(auto_now_add=True, blank=True)
-
-    fname = models.CharField(max_length=200)
-    lname = models.CharField(max_length=200)
-    aboutme = models.TextField(blank=True, null=True, default=None)
-    birth_date = models.DateField()
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    about_me = models.TextField(blank=True, null=True, default=None)
+    birth_date = models.DateField(default='YYYY-MM-DD')
     profile_picture = models.ImageField(upload_to='pfps', null=True, blank=True)
-
     email = models.EmailField()
-    phone_number = PhoneNumberField(unique=True)
-
-    passwd = models.CharField(max_length=200)
+    phone_number = PhoneNumberField(unique=True, default="+48XXXXXXXXX")
+    password = models.CharField(max_length=200)
 
     def __str__(self):
         return f'{self.lname} {self.fname}'

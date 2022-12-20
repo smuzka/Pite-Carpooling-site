@@ -1,22 +1,19 @@
 {% extends 'baseViewTemplate.html' %}
-
 {% block title %}
 Login
 {% endblock title %}
-
+{% load widget_tweaks %}
 {% block body_data %}
 <div class="login-page">
 
     <div class="login-title">Login</div>
 
-    <form class="login-form">
+    <form class="login-form" method="post">
         {% csrf_token %}
         <label class="login-form-label" for="login-email">Email</label>
-        <input class="login-form-input" type="text" id="login-email">
-
+        {{ login_form.username|add_class:'login-form-input' }}
         <label class="login-form-label" for="login-password">Password</label>
-        <input class="login-form-input" type="password" id="login-password">
-
+        {{ login_form.password|add_class:'login-form-input' }}
         <button class="login-form-submit" type="submit">Login</button>
 
     </form>

@@ -1,3 +1,5 @@
+from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserForm
@@ -9,30 +11,35 @@ def home(request):
 
 def login_request(request):
     if request.method == "POST":
-        form = AuthenticationForm(request, data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect("/logged")
-
+        form = AuthenticationForm(data=request.POST)
+        for field in form:
+            print("Field Error:", field.name, field.errors)
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("/")
         else:
             messages.error(request, "Invalid username or password")
     form = AuthenticationForm()
     return render(request=request, template_name="loginPage.html", context={"login_form": form})
 
-
-# TODO: match form fields in registerPage with UserForm
-# TODO: override save method to save record to db
 def register_request(request):
     if request.method == "POST":
+        print(request.POST)
         form = UserForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect("/logged")
+            form.save()
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            first_name = form.cleaned_data.get('first_name')
+            last_name = form.cleaned_data.get('last_name')
+            user = User.objects.create_user(username=email, email=email, password=password, first_name=first_name, last_name=last_name)
+            user.save()
+            user = authenticate(username=email, password=password)
+
+            return HttpResponseRedirect("/")
     form = UserForm()
     return render(request=request, template_name="registerPage.html", context={"register_form": form})
 

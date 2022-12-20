@@ -3,37 +3,42 @@
 {% block title %}
 Register
 {% endblock title %}
-
+{% load widget_tweaks %}
 {% block body_data %}
 <div class="login-page">
 
     <div class="login-title">Register</div>
 
-    <form class="login-form">
+    <form class="login-form" method="post">
         {% csrf_token %}
 
-        <label class="login-form-label" for="register-name">Imię</label>
-        <input class="login-form-input" type="text" id="register-name">
 
-        <label class="login-form-label" for="register-surname">Nazwisko</label>
-        <input class="login-form-input" type="text" id="register-surname">
+        <label class="login-form-label">Imię</label>
+        {{ register_form.first_name|add_class:'login-form-input' }}
 
-        <label class="login-form-label" for="register-email">Email</label>
-        <input class="login-form-input" type="text" id="register-email">
+        <label class="login-form-label">Nazwisko</label>
+        {{ register_form.last_name|add_class:'login-form-input' }}
 
-        <label class="login-form-label" for="register-phone-number">Telefon</label>
-        <input class="login-form-input" type="text" id="register-phone-number">
+        <label class="login-form-label">Email</label>
+        {{ register_form.email|add_class:'login-form-input' }}
 
-        <label class="login-form-label" for="register-password">Password</label>
-        <input class="login-form-input" type="password" id="register-password">
+        <label class="login-form-label">Telefon</label>
+        {{ register_form.phone_number|add_class:'login-form-input' }}
 
-        <label for="register-picture" class="form-label">Zdjęcie profilowe</label>
-        <input class="form-control" type="file" id="register-picture">
+        <label class="login-form-label">Password</label>
+        {{ register_form.password|add_class:'login-form-input' }}
 
+        <label class="login-form-label">Zdjęcie profilowe</label>
+        {{ register_form.profile_picture|add_class:'form-control' }}
+
+        <label class="login-form-label">Data urodzenia</label>
+        {{ register_form.birth_date|add_class:'login-form-input' }}
+
+        <label class="login-form-label">O mnie</label>
+        {{ register_form.about_me|add_class:'login-form-input' }}
         <button class="login-form-submit" type="submit">Register</button>
 
     </form>
-
     <a class="login-button-register" href="/login">
         You already have and account? Login
     </a>

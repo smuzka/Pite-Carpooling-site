@@ -25,4 +25,5 @@ urlpatterns = [
     path("profile", views.profile),
     path("search", views.search),
     path("new-route", views.new_route),
+    path("logout", views.logout_request)
 ]

@@ -1,15 +1,20 @@
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
+
 from .models import User, Ride, City
 from phonenumber_field.formfields import PhoneNumberField
 
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['fname', 'lname', 'aboutme', 'birth_date', 'profile_picture', 'email', 'phone_number', 'passwd']
+        fields = ['first_name', 'last_name', 'about_me', 'birth_date', 'profile_picture', 'email', 'phone_number', 'password']
         phone_number = PhoneNumberField()
+        birth_date = forms.DateField()
         widgets = {
-            'passwd': forms.PasswordInput(),
+            'password': forms.PasswordInput(),
         }
+
+
 
 class RideForm(forms.ModelForm):
     class Meta:

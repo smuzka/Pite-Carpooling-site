@@ -10,7 +10,9 @@ Login
 <script src="{% static 'table/js/sortable.min.js' %}"></script>
 
 <div class="home-page">
-
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.first_name }} {{ user.last_name }}. Thanks for logging in.</p>
+{% endif %}
     <table class="sortable-theme-bootstrap" data-sortable>
         <thead>
             <tr>
