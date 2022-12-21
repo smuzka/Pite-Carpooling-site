@@ -9,7 +9,7 @@ from django.shortcuts import render, redirect
 
 from . import models
 from .forms import UserForm, RideForm, SearchRouteForm
-from .serializers import serialize
+from .serializers import serialize_routes
 
 def home(request):
     return render(request, "homePage.html")
@@ -61,9 +61,11 @@ def profile(request):
     join_date = today - u.join_date
 
     my_routes = models.Ride.objects.filter(driver_id=u.id)
-    serialized_my_routes = serialize(my_routes)
+    serialized_my_routes = serialize_routes(my_routes, request)
 
-    passenger_routes = models.Ride.objects.filter()
+
+    passenger_routes = models.Ride.objects.filter(passengers=u.id)
+    serialized_passenger_routes = serialize_routes(passenger_routes, request)
     myContext = {"name": name,
                 "creationDate": join_date,
                 "age" : age,
@@ -71,21 +73,7 @@ def profile(request):
                 "aboutMe": u.about_me,
                 "aboutCar": "Lorem Ipsum",
                 "myRoutes": serialized_my_routes,
-                "passengerRoutes": [{"origin": "Mielno","destination": "Zamosc",
-                         "date": "24.12.2022",
-                         "hour": "17:00",
-                         "carOwner": "Jacek Jackowski",
-                         "seatsLeft": 4,
-                         "isCarOwner": False,
-                         "passengers": [{
-                                    "name": "Kuba",
-                                    "phoneNumber": "123456789",
-                                },
-                                {
-                                    "name": "Też Kuba",
-                                    "phoneNumber": "172938481",
-                                }],
-                         }],
+                "passengerRoutes": serialized_passenger_routes
 
    }
 
@@ -101,7 +89,7 @@ def search(request):
             dest = form.cleaned_data.get("destination")
 
             routes = models.Ride.objects.filter(begin_city=origin, end_city=dest)
-            serialized_my_routes = serialize(routes)
+            serialized_my_routes = serialize_routes(routes, request)
 
     form = SearchRouteForm()
     myContext = {
@@ -123,3 +111,11 @@ def new_route(request):
     form = RideForm(driver_id=driver_id)
     return render(request=request, template_name="newRoutePage.html", context={"ride_form" : form})
 
+def ride_sign(request, route_id=0):
+    print(route_id)
+    passenger = models.User.objects.get(email=request.user)
+    ride = models.Ride.objects.get(id=route_id)
+    ride.passengers.add(passenger.id)
+    ride.seats_left -= 1
+    ride.save()
+    return HttpResponseRedirect("/profile")

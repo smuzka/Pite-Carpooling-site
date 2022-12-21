@@ -25,5 +25,6 @@ urlpatterns = [
     path("profile", views.profile),
     path("search", views.search),
     path("new-route", views.new_route),
-    path("logout", views.logout_request)
+    path("logout", views.logout_request),
+    path(r'^ride-sign/(?P<route_id>[0-9]+)$', views.ride_sign, name="ride_sign"),
 ]

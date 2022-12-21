@@ -35,8 +35,9 @@
 
     {% endif %}
 
-    {% if not route.isCarOwner %}
-        <Button class="route-card__button">
+    {% if not route.canSign %}
+        <Button class="route-card__button" type="submit"
+                onclick="location.href = '{%url "ride_sign" route_id=route.id %}'" >
             Zapisz się
         </Button>
     {% endif %}
