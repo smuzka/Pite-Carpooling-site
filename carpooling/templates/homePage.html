@@ -7,43 +7,22 @@ Login
 
 {% block body_data %}
 
-<script src="{% static 'table/js/sortable.min.js' %}"></script>
-
 <div class="home-page">
-{% if user.is_authenticated %}
-    <p>Welcome, {{ user.first_name }} {{ user.last_name }}. Thanks for logging in.</p>
-{% endif %}
-    <table class="sortable-theme-bootstrap" data-sortable>
-        <thead>
-            <tr>
-                <th data-sortable="true">
-                    costam
-                </th>
-                <th data-sortable="true">
-                    costam2
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td data-value="0">
-                    0
-                </td>
-                <td data-value="5">
-                    5
-                </td>
-            </tr>
-            <tr>
-                <td data-value="1">
-                    1
-                </td>
-                <td data-value="2">
-                    2
-                </td>
-            </tr>
-        </tbody>
 
-    </table>
+
+{% if user.is_authenticated %}
+
+    <p class="home-page__paragraph">Welcome, <span class="home-page__name">{{ user.first_name }} {{ user.last_name }}.</span></p>
+    <p class="home-page__paragraph">Thanks for logging in.</p>
+
+{% else %}
+
+    <p class="home-page__paragraph">Welcome to <span class="home-page__name">LOGO.</span> </p>
+    <p class="home-page__paragraph"> <span><a href="/register" class="home-page__link">Sign Up</a></span> now and choose a ride wherever you want!</p>
+
+{% endif %}
+
+
 
 </div>
 {% endblock body_data %}

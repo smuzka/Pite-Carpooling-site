@@ -8,6 +8,7 @@
 @import "profile-page.css";
 @import "search-page.css";
 @import "new-route-page.css";
+@import "home-page.css";
 
 /*components*/
 @import "route-card.css";
