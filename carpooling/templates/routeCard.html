@@ -9,10 +9,10 @@
         <div class="route-card__date">
             {{ route.date }} <span class="route-card__date-hour">{{ route.hour }}</span>
         </div>
-        <div class="route-card__car-owner">
+        <a href="/user/{{ route.carOwner.id }}" class="route-card__car-owner">
             <span class="route-card__car-owner-image"></span>
             {{ route.carOwner }}
-        </div>
+        </a>
         <div class="route-card__seats">
             <span class="route-card__seats-help-text">Pozostało wolnych miejsc:</span>
             {{ route.seatsLeft }}
@@ -25,11 +25,11 @@
             Zapisani na podróż:
 
             {% for passenger in route.passengers %}
-                <div class="route-card__passengers-person">
+                <a href="/user/{{ passenger.id }}" class="route-card__passengers-person">
                     <span class="route-card__passengers-person-image"></span>
                     {{ passenger.name }}
                     <span class="route-card__passengers-person-phone-number">tel. {{ passenger.phoneNumber }}</span>
-                </div>
+                </a>
             {% endfor %}
         </div>
 

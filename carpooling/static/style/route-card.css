@@ -45,6 +45,7 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    color: #212529 !important;
 }
 
 .route-card__car-owner-image {
@@ -78,6 +79,7 @@
     column-gap: 10px;
     margin-left: 30px;
     max-width: 350px;
+    color: #212529 !important;
 }
 
 .route-card__passengers-person-image {
@@ -91,7 +93,6 @@
 
 .route-card__passengers-person-phone-number {
     font-size: 20px;
-    margin-left: 20px;
     margin-left: auto;
 }
 

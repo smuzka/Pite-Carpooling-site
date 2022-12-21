@@ -119,3 +119,32 @@ def ride_sign(request, route_id=0):
     ride.seats_left -= 1
     ride.save()
     return HttpResponseRedirect("/profile")
+
+def user(request, id):
+
+    if(models.User.objects.get(email=request.user) == models.User.objects.get(id=id)):
+        return redirect("/profile")
+
+    u = models.User.objects.get(id=id)
+    name = u.first_name + " " + u.last_name
+    today = datetime.date.today()
+    age = today.year - u.birth_date.year - ((today.month, today.day) < (u.birth_date.month, u.birth_date.day))
+    join_date = today - u.join_date
+
+    my_routes = models.Ride.objects.filter(driver_id=u.id)
+    serialized_my_routes = serialize_routes(my_routes, request)
+
+    passenger_routes = models.Ride.objects.filter(passengers=u.id)
+    serialized_passenger_routes = serialize_routes(passenger_routes, request)
+    myContext = {"name": name,
+                 "creationDate": join_date,
+                 "age" : age,
+                 "phoneNumber": u.phone_number,
+                 "aboutMe": u.about_me,
+                 "aboutCar": "Lorem Ipsum",
+                 "myRoutes": serialized_my_routes,
+                 "passengerRoutes": serialized_passenger_routes
+                 }
+
+    return render(request=request, template_name="profilePage.html",
+                  context=myContext)
