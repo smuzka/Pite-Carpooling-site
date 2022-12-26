@@ -1,0 +1,24 @@
+[
+  {
+    "model": "ideas.CarBrand",
+    "pk": 1,
+    "fields": {
+      "name": "audi"
+    }
+  },
+  {
+    "model": "ideas.CarBrand",
+    "pk": 2,
+    "fields": {
+      "name": "jeep"
+    }
+  },
+  {
+    "model": "ideas.CarBrand",
+    "pk": 3,
+    "fields": {
+      "name": "toyota"
+    }
+  }
+]
+  
