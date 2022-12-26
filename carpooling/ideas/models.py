@@ -35,3 +35,15 @@ class Ride(models.Model):
     end_city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='end_city')
     passengers = models.ManyToManyField(User)
 
+class CarBrand(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class CarModel(models.Model):
+    brand_id = models.ForeignKey(CarBrand, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name

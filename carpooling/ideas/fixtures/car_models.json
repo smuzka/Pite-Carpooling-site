@@ -1,0 +1,50 @@
+[
+  {
+    "model": "ideas.CarModel",
+    "pk": 1,
+    "fields": {
+      "brand_id": "1",
+      "name": "A3"
+    }
+  },
+  {
+    "model": "ideas.CarModel",
+    "pk": 2,
+    "fields": {
+      "brand_id": "1",
+      "name": "TT"
+    }
+  },
+  {
+    "model": "ideas.CarModel",
+    "pk": 3,
+    "fields": {
+      "brand_id": "2",
+      "name": "Cherokee"
+    }
+  },
+  {
+    "model": "ideas.CarModel",
+    "pk": 4,
+    "fields": {
+      "brand_id": "2",
+      "name": "Wrangler TJ"
+    }
+  },
+  {
+    "model": "ideas.CarModel",
+    "pk": 5,
+    "fields": {
+      "brand_id": "3",
+      "name": "Supra"
+    }
+  },
+  {
+    "model": "ideas.CarModel",
+    "pk": 6,
+    "fields": {
+      "brand_id": "3",
+      "name": "Corolla"
+    }
+  }
+]
